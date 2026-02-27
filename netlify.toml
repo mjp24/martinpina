@@ -1,0 +1,49 @@
+# netlify.toml — martinpina.com deployment config
+
+[build]
+  publish = "."    # root of the site
+
+# Redirect www → apex
+[[redirects]]
+  from = "https://www.martinpina.com/*"
+  to   = "https://martinpina.com/:splat"
+  status = 301
+  force = true
+
+# Custom 404 page (create /404.html when ready)
+[[redirects]]
+  from = "/*"
+  to   = "/404.html"
+  status = 404
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache static assets aggressively
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# HTML — short cache, allows quick deploys
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
