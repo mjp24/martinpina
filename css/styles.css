@@ -265,7 +265,7 @@ main { padding-top: 68px; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--ivory-deep);
+  background-color: #111826;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -274,7 +274,7 @@ main { padding-top: 68px; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.42), rgba(0,0,0,0.42));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.15));
 }
 .hero-content {
   position: relative;
