@@ -2,18 +2,18 @@
 
 /* ── Mobile Navigation ─────────────────────────────────── */
 const menuBtn = document.querySelector('.nav-menu-btn');
-const navLinks = document.querySelector('.nav-links');
-if (menuBtn && navLinks) {
+const navMobile = document.querySelector('.nav-mobile');
+if (menuBtn && navMobile) {
   menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    const open = navLinks.classList.contains('open');
+    navMobile.classList.toggle('open');
+    const open = navMobile.classList.contains('open');
     menuBtn.setAttribute('aria-expanded', open);
   });
 }
 
 /* ── Active Nav Link ───────────────────────────────────── */
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-links a').forEach(link => {
+document.querySelectorAll('.nav-links a, .nav-mobile a').forEach(link => {
   const href = link.getAttribute('href');
   if (href === currentPage || (currentPage === '' && href === 'index.html')) {
     link.classList.add('active');

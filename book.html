@@ -14,7 +14,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Book",
-    "name": "The Shore Between",
+    "name": "Prophet of Rage",
     "author": { "@type": "Person", "name": "Martin Pina" },
     "description": "A debut collection of essays about coastlines, memory, and the places that make us."
   }
@@ -24,16 +24,24 @@
 
 <nav class="site-nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Martin <span>Pina</span></a>
-    <ul class="nav-links">
+    <ul class="nav-links nav-left" role="list">
       <li><a href="index.html">Home</a></li>
       <li><a href="blog/index.html">Blog</a></li>
       <li><a href="book.html" class="active">Book</a></li>
+    </ul>
+    <a href="index.html" class="nav-logo">Martin Pina</a>
+    <ul class="nav-links nav-right" role="list">
       <li><a href="about.html">About</a></li>
     </ul>
     <button class="nav-menu-btn" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
+  </div>
+  <div class="nav-mobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="book.html" class="active">Book</a>
+    <a href="about.html">About</a>
   </div>
 </nav>
 
@@ -44,8 +52,7 @@
     <div class="container">
       <div class="book-hero-inner">
         <div class="reveal">
-          <!-- Replace with actual book cover -->
-          <div class="book-hero-cover img-placeholder" style="width:320px;aspect-ratio:2/3;color:rgba(248,244,238,0.3);">Book Cover</div>
+          <img src="assets/images/book-cover.png" alt="Prophet of Rage — A Cyber Thriller by Martin Pina" class="book-hero-cover">
         </div>
         <div class="reveal">
           <p class="eyebrow">Debut Collection — 2026</p>

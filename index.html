@@ -34,24 +34,33 @@
 <!-- ── Navigation ─────────────────────────────────────────── -->
 <nav class="site-nav" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Martin <span>Pina</span></a>
-    <ul class="nav-links" role="list">
+    <ul class="nav-links nav-left" role="list">
       <li><a href="index.html">Home</a></li>
       <li><a href="blog/index.html">Blog</a></li>
       <li><a href="book.html">Book</a></li>
+    </ul>
+    <a href="index.html" class="nav-logo">Martin Pina</a>
+    <ul class="nav-links nav-right" role="list">
       <li><a href="about.html">About</a></li>
     </ul>
     <button class="nav-menu-btn" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
+  <div class="nav-mobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="book.html">Book</a>
+    <a href="about.html">About</a>
+  </div>
 </nav>
 
 <main>
 
   <!-- ── Hero ────────────────────────────────────────────── -->
+  <!-- To set a background image: add style="background-image:url('assets/images/hero.jpg')" -->
   <section class="hero" aria-label="Introduction">
-    <div class="hero-text">
+    <div class="hero-content">
       <p class="eyebrow hero-eyebrow fade-up fade-up-1">Author · Essayist · Storyteller</p>
       <h1 class="hero-headline fade-up fade-up-2">
         Words that<br>
@@ -64,17 +73,6 @@
       <div class="hero-actions fade-up fade-up-4">
         <a href="blog/index.html" class="btn btn-dark">Read the Blog</a>
         <a href="book.html" class="btn btn-outline">Discover the Book</a>
-      </div>
-    </div>
-    <div class="hero-visual fade-up fade-up-2">
-      <div class="hero-image-frame">
-        <!-- Replace with author photo: <img src="assets/images/author.jpg" alt="Martin Pina"> -->
-        <div class="img-placeholder" style="width:100%;aspect-ratio:4/5;">Author Photo</div>
-        <div class="hero-accent"></div>
-      </div>
-      <div class="hero-quote">
-        "Every landscape holds the memory of everyone who ever stood in it."
-        <cite>— The Shore Between, Ch. 4</cite>
       </div>
     </div>
   </section>
